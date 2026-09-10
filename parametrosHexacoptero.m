@@ -63,8 +63,11 @@ P.JrProp = (1/3)*P.propMass*P.propRadius^2;
 P.Jr = P.JrMotor + P.JrProp;
 
 %% Coeficientes de arrastre provisionales
-% Se conservarán temporalmente para poder simular.
-% Después se sustituirán por los valores calculados.
+% Estos coeficientes se conservan para el modelo lineal
+% utilizado en el cálculo de las ganancias del controlador.
+%
+% NO corresponden a los coeficientes cuadráticos obtenidos
+% mediante CFD.
 
 P.kftx = 0.10;                 % [N*s/m]
 P.kfty = 0.10;                 % [N*s/m]
@@ -76,5 +79,8 @@ P.kfaz = 0.15;                 % Provisional
 
 %% Sistema propulsor
 P.rotor = calcularParametrosRotor(P);
+
+%% Parámetros aerodinámicos obtenidos mediante CFD
+P.aero = calcularParametrosAerodinamicos(P);
 
 end

@@ -29,6 +29,23 @@ kfax = P.kfax;
 kfay = P.kfay;
 kfaz = P.kfaz;
 
+%% Densidad atmosférica de operación
+
+rho = P.rho;
+
+%% Parámetros aerodinámicos obtenidos mediante CFD
+
+CdA_x = P.aero.CdA_x;
+CdA_y = P.aero.CdA_y;
+CdA_z = P.aero.CdA_z;
+
+kDx = P.aero.kDx;
+kDy = P.aero.kDy;
+kDz = P.aero.kDz;
+
+% Velocidad máxima de viento considerada en los requerimientos
+Vw_max = P.aero.windSpeedMax;
+
 %% Coeficientes del rotor
 b = P.rotor.b;
 d = P.rotor.d;
@@ -89,6 +106,14 @@ chen_a = 35;
 chen_b = 3;
 chen_c = 28;
 
+%% Normalización del oscilador de Chen
+
+chen_scale_x = 30;
+chen_scale_y = 35;
+
+chen_center_z = 30;
+chen_scale_z  = 30;
+
 %% Secuencia para roll
 tiempo_phi = [0; 2; 4; 6; 8; 10; 12];
 
@@ -118,4 +143,5 @@ referencia_theta = [
 ];
 
 setpoint_theta_sequence = [tiempo_theta referencia_theta];
+
 tau_motor = 0.05;   % [s], provisional
