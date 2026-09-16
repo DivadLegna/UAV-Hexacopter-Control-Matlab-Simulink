@@ -16,7 +16,7 @@ P.rhoRef = 1.225;              % [kg/m^3]
 P.rho    = 0.98;               % [kg/m^3]
 
 %% Propiedades generales
-P.mass         = 6.36386;      % [kg]
+P.mass         = 6.88145;      % [kg]
 P.numberMotors = 6;
 P.armLength    = 0.425;        % [m]
 
@@ -27,9 +27,9 @@ P.propRadius   = P.propDiameter/2;
 P.propMass     = 0.040;        % [kg]
 
 %% Momentos de inercia obtenidos de SolidWorks
-JcadX = 0.20092663733;         % [kg*m^2]
-JcadY = 0.24753190714;         % [kg*m^2]
-JcadZ = 0.17443826024;         % [kg*m^2]
+JcadX = 0.20922611829;         % [kg*m^2]
+JcadY = 0.18747370021;         % [kg*m^2]
+JcadZ = 0.25245662559;         % [kg*m^2]
 
 % Selección del eje vertical del CAD:
 P.verticalAxisCAD = "Y";
