@@ -11,6 +11,8 @@ Panels:
         - /Pose1/Topic1
         - /Marker1
         - /Marker1/Status1
+        - /Marker2
+        - /Marker2/Topic1
       Splitter Ratio: 0.5
     Tree Height: 716
   - Class: rviz_common/Selection
@@ -24,7 +26,6 @@ Panels:
   - Class: rviz_common/Views
     Expanded:
       - /Current View1
-      - /Current View1/Focal Point1
     Name: Views
     Splitter Ratio: 0.5
   - Class: rviz_common/Time
@@ -86,6 +87,19 @@ Visualization Manager:
         Reliability Policy: Reliable
         Value: /hexacopter/mesh
       Value: true
+    - Class: rviz_default_plugins/Marker
+      Enabled: true
+      Name: Marker
+      Namespaces:
+        trayectoria_recorrida: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /hexacopter/trail
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -131,26 +145,25 @@ Visualization Manager:
   Value: true
   Views:
     Current:
-      Class: rviz_default_plugins/Orbit
-      Distance: 190.68942260742188
+      Class: rviz_default_plugins/FrameAligned
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
-      Focal Point:
-        X: -10.011725425720215
-        Y: 10.07414722442627
-        Z: -10.783661842346191
-      Focal Shape Fixed Size: true
-      Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
+      Lock Camera: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.710073709487915
-      Target Frame: <Fixed Frame>
-      Value: Orbit (rviz)
-      Yaw: 2.2448909282684326
+      Pitch: 0.770073413848877
+      Point towards: -z axis
+      Position:
+        X: 4.836585521697998
+        Y: -4.313288688659668
+        Z: 5.077657222747803
+      Target Frame: hexacopter
+      Value: FrameAligned (rviz_default_plugins)
+      Yaw: 2.46647572517395
     Saved: ~
 Window Geometry:
   Displays:
@@ -168,5 +181,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1908
-  X: 0
-  Y: 0
+  X: -32
+  Y: -32

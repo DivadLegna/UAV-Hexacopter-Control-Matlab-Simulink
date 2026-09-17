@@ -145,3 +145,8 @@ referencia_theta = [
 setpoint_theta_sequence = [tiempo_theta referencia_theta];
 
 tau_motor = 0.05;   % [s], provisional
+
+[referencia, mision] = convertirWaypointsMissionPlanner( ...
+    "Tarea2Mejorada(1).waypoints", 5, 45);
+
+tiempoFinal = referencia(end,1);
