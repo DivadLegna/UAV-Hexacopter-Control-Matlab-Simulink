@@ -1,0 +1,4 @@
+slprj/
+*.slxc
+/+bus_conv_fcns/
+.slx.autosave
